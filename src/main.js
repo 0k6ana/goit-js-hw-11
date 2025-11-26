@@ -14,9 +14,9 @@ const form = document.querySelector("#search-form");
 form.addEventListener("submit", event => {
   event.preventDefault();
 
-  const query = event.target.elements.query.value.trim();
+  const query = event.target.elements['search-text'].value.trim();
 
-  if (query === "") {
+  if ( query === "") {
     iziToast.warning({
       title: "Увага",
       message: "Введіть пошукове слово!",
